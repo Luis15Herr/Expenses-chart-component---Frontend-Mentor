@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Expenses chart component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="container">
+    <div class="expenses">
+      <div class="balance">
+        <div class="balance__info">
+          <span class="balance__txt">My balance</span>
+          <span class="balance__amount">$921.48</span>
+        </div>
+        <svg
+          class="balance__logo"
+          width="72"
+          height="48"
+          viewBox="0 0 72 48"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g fill="none" fill-rule="evenodd">
+            <circle fill="#382314" cx="48" cy="24" r="24" />
+            <circle stroke="#FFF" stroke-width="2" cx="24" cy="24" r="23" />
+          </g>
+        </svg>
+      </div>
+      <div class="expenses__info">
+        <div class="expenses__time-info">Spending - Last 7 days</div>
+        <div class="expenses__chart"><canvas id="myChart"></canvas></div>
+        <div class="expenses__bottom">
+          <div class="expenses__total-amount">
+            <span class="total-amount__headline">Total this month</span>
+            <span class="total-amount__number">$478.33</span>
+          </div>
+          <div class="expenses__percentage">
+            <span class="total-amount__percentage">+2.4%</span>
+            <span class="total-amount__comparisionDate">from last month</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js.js"></script>
+  </body>
+</html>

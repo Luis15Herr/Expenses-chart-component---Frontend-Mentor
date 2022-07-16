@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  font-size: 18px;
+  background-color: #f8e9dd;
+  position: relative;
+}
+
+body::after {
+  /*  content: "";
+    width: 100%;
+    height: 100%;
+    background-image: url("./design/desktop-design.jpg");
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.2;
+    pointer-events: none; */
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.expenses {
+  width: 540px;
+}
+
+.balance {
+  background-color: #ec775f;
+  color: #fffaf5;
+  border-radius: 20px;
+  height: 125px;
+  padding: 10px 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.balance__logo {
+  margin-right: 6px;
+}
+
+.balance__txt {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.balance__amount {
+  font-size: 1.9em;
+  letter-spacing: -0.5px;
+}
+
+.expenses__info {
+  background-color: #fffaf5;
+  margin-top: 25px;
+  min-height: 510px;
+  border-radius: 20px;
+  padding: 30px 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.expenses__time-info {
+  color: #382314;
+  font-size: 1.8em;
+  font-weight: 700;
+}
+
+.expenses__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding-bottom: 10px;
+}
+
+.total-amount__headline {
+  display: block;
+  color: #93867b;
+}
+
+.total-amount__number {
+  font-size: 2.65em;
+  color: #382314;
+  font-weight: 700;
+}
+
+.expenses__percentage {
+  padding-bottom: 10px;
+  text-align: right;
+}
+
+.total-amount__percentage {
+  color: #382314;
+  display: block;
+  font-weight: 700;
+}
+
+.total-amount__comparisionDate {
+  color: #93867b;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 15px;
+}
+/*# sourceMappingURL=style.css.map */

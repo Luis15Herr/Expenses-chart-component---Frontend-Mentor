@@ -22,6 +22,10 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/charts.css/dist/charts.min.css"
+    />
   </head>
   <body class="container">
     <div class="expenses">
@@ -45,7 +49,17 @@
       </div>
       <div class="expenses__info">
         <div class="expenses__time-info">Spending - Last 7 days</div>
-        <div class="expenses__chart"><canvas id="myChart"></canvas></div>
+        <!-- <div class="expenses__chart"><canvas id="myChart"></canvas></div> -->
+        <table
+          id="custom__chart"
+          class="charts-css column show-labels show-data-on-hover data-spacing-10"
+        >
+          <caption>
+            2016 Summer Olympics Medal Table
+          </caption>
+
+          <tbody></tbody>
+        </table>
         <div class="expenses__bottom">
           <div class="expenses__total-amount">
             <span class="total-amount__headline">Total this month</span>

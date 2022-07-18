@@ -184,6 +184,8 @@ body {
 #custom__chart td .tooltip {
   bottom: initial;
   top: -40px;
+  background-color: #382314;
+  padding: 7px 10px;
 }
 
 #custom__chart td .tooltip::after {
@@ -209,6 +211,7 @@ body {
 #custom__chart .active .tooltip {
   visibility: visible;
   opacity: 1;
+  background-color: #382314;
 }
 
 @-webkit-keyframes revealing-bars {

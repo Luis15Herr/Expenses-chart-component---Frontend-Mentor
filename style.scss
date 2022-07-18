@@ -139,6 +139,8 @@ body {
     .tooltip {
       bottom: initial;
       top: -40px;
+      background-color: $Darkbrown;
+      padding: 7px 10px;
       &::after {
         content: initial;
       }
@@ -157,6 +159,7 @@ body {
     .tooltip {
       visibility: visible;
       opacity: 1;
+      background-color: $Darkbrown;
     }
   }
 }

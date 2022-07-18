@@ -2,8 +2,6 @@ let data;
 let amounts = [];
 let biggerAmount = 0;
 let table = document.querySelector("#custom__chart tbody");
-let columns = document.querySelectorAll("#custom__chart tbody td");
-let lastItem;
 
 fetch("data.json")
   .then((data) => data.json())
@@ -29,12 +27,15 @@ function getData() {
     table.innerHTML += `<tr>
   <th scope="row">${item.day}</th>
   <td style="--start: 0; --size: ${sizeOfColumns[index]}">
-    <span class="tooltip"> $ ${item.amount} </span>
+    <span class="tooltip"> $${item.amount} </span>
   </td>
 </tr>`;
   });
-
+  let columns = document.querySelectorAll("#custom__chart tbody td");
+  console.log(columns);
+  let lastItem;
   columns.forEach((item) => {
+    console.log("build");
     item.addEventListener("click", function () {
       if (lastItem) {
         lastItem.classList.toggle("active");

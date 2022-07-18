@@ -19,18 +19,6 @@ body {
   font-size: 18px;
   background-color: $Cream;
   position: relative;
-  /* &::after {
-    content: "";
-    width: 100%;
-    height: 100%;
-    background-image: url("./design/desktop-design.jpg");
-    background-position: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0.4;
-    pointer-events: none;
-  } */
 }
 .container {
   display: flex;
@@ -43,7 +31,7 @@ body {
 .balance {
   background-color: $Softred;
   color: $Verypaleorange;
-  border-radius: 20px;
+  border-radius: 8px;
   height: 125px;
   padding: 10px 32px;
   display: flex;
@@ -179,5 +167,100 @@ body {
   }
   15% {
     transform: scaleY(1);
+  }
+}
+
+.attribution {
+  font-size: 13px;
+  text-align: center;
+  position: absolute;
+  bottom: 10px;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  left: 50%;
+}
+
+.attribution a {
+  color: $Softred;
+}
+
+@media screen and (max-width: 600px) {
+  body,
+  html {
+    height: auto;
+  }
+  .container {
+    padding: 0 15px;
+  }
+  .expenses {
+    margin-top: 30px;
+    width: 100%;
+    margin-bottom: 70px;
+  }
+  .balance {
+    height: 95px;
+    padding: 10px 20px;
+  }
+  .balance__txt {
+    margin: 0;
+    font-size: 0.85em;
+  }
+  .balance__amount {
+    font-size: 1.45em;
+  }
+  .balance__logo {
+    margin-right: 0;
+    height: 40px;
+  }
+  .expenses__time-info {
+    font-size: 1.35em;
+  }
+  .expenses__info {
+    margin-top: 15px;
+    padding: 25px 20px 10px 20px;
+
+    min-height: 420px;
+  }
+  #custom__chart {
+    &::after {
+      bottom: -30px;
+    }
+    tr {
+      th {
+        font-size: 0.65em;
+        padding-left: 10px;
+      }
+      padding-right: 0;
+
+      &:first-child {
+        th {
+          padding-left: 0px;
+          padding-right: 0;
+        }
+      }
+      &:last-child {
+        th {
+          padding-left: 10px;
+        }
+      }
+    }
+  }
+  .total-amount__headline {
+    font-size: 0.85em;
+    margin-bottom: 5px;
+  }
+  .total-amount__number {
+    font-size: 1.7em;
+  }
+  .expenses__percentage {
+    padding-bottom: 0;
+  }
+  .total-amount__percentage {
+    font-size: 0.85em;
+    top: 1px;
+    position: relative;
+  }
+  .total-amount__comparisionDate {
+    font-size: 0.85em;
   }
 }

@@ -198,6 +198,10 @@ body {
   cursor: pointer;
 }
 
+#custom__chart .biggerColumn {
+  background-color: #76b5bc;
+}
+
 #custom__chart .active {
   background-color: #76b5bc;
 }

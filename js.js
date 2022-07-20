@@ -1,6 +1,7 @@
 let data;
 let amounts = [];
 let biggerAmount = 0;
+let biggerIndex = 0;
 let table = document.querySelector("#custom__chart tbody");
 
 fetch("data.json")
@@ -11,13 +12,13 @@ fetch("data.json")
   });
 
 function getData() {
-  data.forEach((item) => {
+  data.forEach((item, index) => {
     if (biggerAmount < item.amount) {
       biggerAmount = item.amount;
+      biggerIndex = index;
     }
     amounts.push(item.amount);
   });
-
   let sizeOfColumns = [];
   amounts.forEach((item) => {
     sizeOfColumns.push((item * 100) / biggerAmount / 100);
@@ -31,11 +32,14 @@ function getData() {
   </td>
 </tr>`;
   });
+
   let columns = document.querySelectorAll("#custom__chart tbody td");
-  console.log(columns);
   let lastItem;
-  columns.forEach((item) => {
-    console.log("build");
+
+  columns.forEach((item, index) => {
+    if (index === biggerIndex) {
+      item.classList.add("biggerColumn");
+    }
     item.addEventListener("click", function () {
       if (lastItem) {
         lastItem.classList.toggle("active");
